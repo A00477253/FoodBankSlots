@@ -31,7 +31,6 @@ def check_and_notify():
             send_email()
         else:
             print("No available slots")
-            send_email()
     else:
         print(f"API call failed with status code: {response.status_code}")
         print(response.text)
@@ -39,7 +38,7 @@ def check_and_notify():
 def send_email():
     sender = 'malusarepra@gmail.com'
     password = 'jpgj gdvv qtsf ovhu'
-    receiver = 'malusarepra@gmail.com'
+    receiver = ['malusarepra@gmail.com','viggii1963@gmail.com']
     subject = 'Food Bank Booking Open!'
     body = 'The food bank booking is now open. Visit the site to book.'
     yag = yagmail.SMTP(user=sender, password=password)
