@@ -1,4 +1,5 @@
 import requests
+import yagmail
 
 # API endpoint
 api_url = "https://outlook.office365.com/owa/calendar/SMUCommunityFoodRoom@smuhalifax.onmicrosoft.com/bookings/service.svc/GetStaffBookability"
@@ -27,7 +28,25 @@ if response.status_code == 200:
 
     # Check if there are any bookable time slots
     if bookable_time_blocks:
-        print("Slot available")
+        # Send an email
+        subject = "Slot Available Notification"
+        body = "Slots are available! Book now."
+
+      
+        sender_email = "matchthefolks@gmail.com"
+        sender_password = "sdvbfj"
+        receiver_email = "viggii1963@gmail.com"  
+
+        # Set up yagmail SMTP
+        yag = yagmail.SMTP(sender_email, sender_password)
+
+        # Send the email
+        yag.send(to=receiver_email, subject=subject, contents=body)
+
+        # Close the connection
+        yag.close()
+        
+        print("Email sent successfully")
     else:
         print("No available slots")
 else:
