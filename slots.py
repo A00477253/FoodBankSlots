@@ -31,6 +31,7 @@ def check_and_notify():
             send_email()
         else:
             print("No available slots")
+            send_email()
     else:
         print(f"API call failed with status code: {response.status_code}")
         print(response.text)
