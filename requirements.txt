@@ -1,2 +1,2 @@
-requests==2.26.0
-yagmail==0.14.0
+requests
+yagmail
