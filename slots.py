@@ -36,8 +36,8 @@ def check_and_notify():
         print(response.text)
 
 def send_email():
-    sender = os.getenv('MY_EMAIL')
-    password = os.getenv('MY_PASSWORD')
+    sender = 'malusarepra@gmail.com'
+    password = 'jpgj gdvv qtsf ovhu'
     receiver = 'malusarepra@gmail.com'
     subject = 'Food Bank Booking Open!'
     body = 'The food bank booking is now open. Visit the site to book.'
