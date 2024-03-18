@@ -38,7 +38,7 @@ def check_and_notify():
 def send_email():
     sender = 'malusarepra@gmail.com'
     password = 'jpgj gdvv qtsf ovhu'
-    receiver = ['malusarepra@gmail.com','viggii1963@gmail.com']
+    receiver = ['malusarepra@gmail.com','viggii1963@gmail.com','risvarrt@gmail.com','rishivarmanofficial@gmail.com']
     subject = 'Food Bank Booking Open!'
     body = 'The food bank booking is now open. Visit the site to book.'
     yag = yagmail.SMTP(user=sender, password=password)
